@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+	<title> Bible App</title>
+</head>
+
+<body>
+
+
+	<label class="select-version" for="version">Bible Version</label>
+
+     <div class="version">
+	<select name="version" id='version' required>
+
+	<option value="kjv"> KJV </option>
+	<option value="korean" selected>Korean</option>
+	<option value="asv">ASV</option>
+
+	</select>
+  </div>
+
+
+    <label class="select-book" for="version">Book</label>
+
+    <div class="book">
+
+      <select name="book" id='book' required>
+
+        <option value="ps1" selected> Psalms</option>
+        <option value="romans1" >Romans</option>
+        <option value="jn1">John</option>
+
+      </select>
+
+    </div>
+      
+
+
+    <label class="select-version" for="version">Chapter</label>
+      <select name="version" id='version' required>
+
+        <option value="0"> KJV </option>
+        <option value="1" selected>NIV</option>
+        <option value="2">ASV</option>
+
+      </select>
+
+      <label class="select-version" for="version">Verse</label>
+      <select name="version" id='version' required>
+
+        <option value="0"></option>   
+       
+
+      </select>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
+
+	<script src="js/app.js"></script>
+</body>
+</html>
