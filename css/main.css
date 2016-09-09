@@ -97,7 +97,7 @@ padding-bottom: 10px;
 }
 
 label {
-
+	color:#e6e6e6;
 	font-size: 50px;
 }
 
@@ -146,8 +146,12 @@ select {
 	display: inline;
 	width: 60px;
 	font-size: 50px;
-	color:#8c8c8c;
+	color: black;
 
+}
+
+option {
+		color: black;
 }
 
 
