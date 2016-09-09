@@ -21,9 +21,7 @@ body {
 .black-canvas {
 	background-color: #333333;
 	
-	
 }
-
 
 .heading {
 	/*opacity: 0.8;*/
@@ -148,7 +146,7 @@ select {
 	display: inline;
 	width: 60px;
 	font-size: 50px;
-	color:white;
+	color:#8c8c8c;
 
 }
 
