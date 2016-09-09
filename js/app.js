@@ -1,8 +1,6 @@
 
 $(document).ready(function(){
 
-
-		// chapterFilter(book);
 	var clickCount=0
 
 	var i=0
@@ -37,13 +35,13 @@ $(document).ready(function(){
 			$('.main').animate({top:'100px'},"slow")
 		
 
-		console.log(clickCount)
+	
 
 		} else {
 
 			$('.main').animate({top:'-380px'},"slow")
 
-		console.log(clickCount)
+	
 
 		}
 
@@ -75,8 +73,6 @@ $(document).ready(function(){
 
       			current_verses=[]
 
-				console.log(myData)
-
 				showResults(myData);
 
 				}
@@ -94,17 +90,9 @@ $(document).ready(function(){
 
       	 $.each(myData, function(index, value){
 
-
-				console.log(value.verse)
-
-			
-
-
 				current_verses.push(value.verse)
 
 				verse_number = current_verses.length
-
-				console.log( verse_number)
 
 
 				 $('.chapter-display').append( '<p>'+ verse_number+'   '+ value.verse+'</p>')
@@ -119,19 +107,11 @@ $(document).ready(function(){
 
  	$('.verse select').change(function(){
 
-
  		$('.chapter-display p').remove();
-
- 		console.log('THIS IS ' + current_verses[3])
-
- 		console.log('USE THIS NU<BER '+ $('#verse option:selected').val())
-
-
 
  		var selected_verse_number= ($('#verse option:selected').val())
 
  		$('.chapter-display').append('<p>'+selected_verse_number+ ' '+ current_verses[ selected_verse_number-1 ]+'</p>')
-
 
  	})
 
@@ -142,7 +122,10 @@ $(document).ready(function(){
 
 
 
+
  		version = $('#version option:selected').val()
+
+ 		book= book.substring(0, book.length-1)+selected_chapter
 
 			var params= {
 				p:book,
@@ -150,6 +133,13 @@ $(document).ready(function(){
 			}
 
 			getRequest(params);
+
+
+
+
+			$('.chapter-display h1').text( $('#book option:selected').text()+ ' '+ selected_chapter) 
+
+
  	})
 
 
@@ -197,19 +187,11 @@ $(document).ready(function(){
 
  	})
 
-
 	$('.chapter select').change(function(){
 
-
    		selected_chapter= $(this).val()
-
-   		console.log(selected_chapter)
-
-   		// console.log( 'length of book is'+ book.length)
-
+   		
    		book= book.substring(0, book.length-1)
-
-   		console.log(book)
 
    		$('.chapter-display h1').text( $('#book option:selected').text()+ ' '+ selected_chapter) 
 
@@ -220,18 +202,22 @@ $(document).ready(function(){
 				v: version
 			}
 
-			console.log(book+selected_chapter)
-
 			getRequest(params);
 
 			book=book+'1'
 
- 		
+
+			console.log(selected_chapter)
+
  	})
-
-
-
 	
-	$('.nav').show();
+
+
+	$('.black-canvas').fadeIn('slow',function(){
+
+		$('.nav').show();
+	})
+	
+
 
 });
