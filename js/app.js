@@ -1,6 +1,7 @@
 
 $(document).ready(function(){
 
+
 		// chapterFilter(book);
 	var clickCount=0
 
@@ -31,7 +32,10 @@ $(document).ready(function(){
 
 		if(clickCount%2 != 0){
 
-			$('.main').animate({top:'0px'},"slow")
+			
+
+			$('.main').animate({top:'100px'},"slow")
+		
 
 		console.log(clickCount)
 
@@ -227,49 +231,7 @@ $(document).ready(function(){
 
 
 
-
-
-
-
 	
-    //////// here starts the click li chapter selection//////////////////////////////////////////////
-
-
-
-   // $('.chapter').on('click', 'li', function(){
-
-   // 		selected_chapter= $(this).text()
-
-   // 		console.log(selected_chapter)
-
-   // 		// console.log( 'length of book is'+ book.length)
-
-   // 		book= book.substring(0, book.length-1)
-
-   // 		console.log(book)
-
-   // 		$('.chapter-display h1').text( $('#book option:selected').text()+ ' '+ selected_chapter) 
-
- 		// version = $('#version option:selected').val()
-
-			// var params= {
-			// 	p:book+selected_chapter,
-			// 	v: version
-			// }
-
-			// console.log(book+selected_chapter)
-
-			// getRequest(params);
-
-			// book=book+'1'
-
-			// // chapterFilter(book);
-   // 			})
-
-    //////// here ends the click li chapter selection//////////////////////////////////////////////
-
-	
-
-	
+	$('.nav').show();
 
 });
