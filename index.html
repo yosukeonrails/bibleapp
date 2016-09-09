@@ -27,7 +27,7 @@
 
       <select name="book" id='book' required>
 
-        <option value="ps1" selected> Psalms</option>
+        <option value="ps1"> Psalms</option>
         <option value="romans1" >Romans</option>
         <option value="jn1">John</option>
 
@@ -39,13 +39,24 @@
         
       </div>
 
-      <label class="select-version" for="version">Verse</label>
-      <select name="version" id='version' required>
+      <div class="verse">
 
-        <option value="0"></option>   
-       
+      <label class="select-verse" for="verse">Verse</label>
+      <select name="verse" id='verse' required>
+
+        <option value="0"></option> 
 
       </select>
+
+        
+      </div>
+
+
+      <div class="chapter-display">
+
+      </div>
+
+      
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
 <script src="js/filter.js"></script>

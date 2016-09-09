@@ -52,10 +52,15 @@ $(document).ready(function(){
 
       function showResults(myData){
 
+      			$('#verse option').remove();
+
+      			$('.chapter-display p').remove();
 
       	 $.each(myData, function(index, value){
 
+
 				console.log(value.verse)
+
 
 				current_verses.push(value.verse)
 
@@ -63,9 +68,22 @@ $(document).ready(function(){
 
 				console.log( verse_number)
 
+
+				 $('.chapter-display').append( '<p>'+ verse_number+' '+ value.verse+'</p>')
+
+				$('#verse').append('<option value='+verse_number+'>'+verse_number+'</option>')
+
 			})
 
       }
+
+
+
+ 	// $('.verse select').change(function(){
+
+ 	// })
+
+
 
 
  	$('.version select').change(function(){
@@ -129,8 +147,11 @@ $(document).ready(function(){
 
 			book=book+'1'
 
+
+
 			// chapterFilter(book);
-   })
+   			})
+
 
 	
 
