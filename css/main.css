@@ -2,3 +2,7 @@
 	display: inline;
 	margin-right: 10px;
 }
+
+.chapter, .book ,.version,.verse {
+	display: inline;
+}

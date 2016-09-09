@@ -79,9 +79,19 @@ $(document).ready(function(){
 
 
 
- 	// $('.verse select').change(function(){
+ 	$('.verse select').change(function(){
 
- 	// })
+ 		$('.chapter-display p').remove();
+
+ 		console.log('THIS IS ' + current_verses[3])
+
+ 		console.log('USE THIS NU<BER '+ $('#verse option:selected').val())
+
+ 		var selected_verse_number= ($('#verse option:selected').val())
+
+ 		$('.chapter-display').append('<p>'+selected_verse_number+ ' '+ current_verses[ selected_verse_number-1 ]+'</p>')
+
+ 	})
 
 
 
