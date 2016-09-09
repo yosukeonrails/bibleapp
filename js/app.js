@@ -28,7 +28,7 @@ $(document).ready(function(){
 
       	$.ajax({
 
-			url:'http://getbible.net/json',
+			url:'https://getbible.net/json',
 			dataType: 'jsonp',
 			data: params,
 			jsonp: 'getbible',
