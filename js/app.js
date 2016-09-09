@@ -153,7 +153,7 @@ $(document).ready(function(){
 
  	$('.book select').click().change(function(){
 
- 			$('.chapter-display h1').text( $('#book option:selected').text()+ ' '+ selected_chapter) 
+ 			$('.chapter-display h1').text( $('#book option:selected').text()+ ' '+ 1) 
  
 
  		book = $('#book option:selected').val()
