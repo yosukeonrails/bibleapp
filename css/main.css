@@ -3,6 +3,12 @@
 	margin-right: 10px;
 }
 
-.chapter, .book ,.version,.verse {
+.chapter, .book ,.version, .new-book{
 	display: inline;
+}
+
+select {
+	width: 200px;
+	font-size: 40px;
+
 }
