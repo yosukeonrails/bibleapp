@@ -1,27 +1,76 @@
 body {
 
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Montserrat', sans-serif;	
+	margin:0;
+	padding:0;
+
+}
+
+.fa.fa-caret-square-o-down {
+	font-size: 100px;
+	color: white;
+	 display: table;
+    margin: 0 auto;
+    padding-bottom: 30px;
+
+}
+
+
+
+.black-canvas {
+
+	background-image: url('../images/skydark.jpg') ;
 	background-color: #333333;
-	margin:0;
-	padding:0;
-
 }
-
-
-.heading h1 {
-	text-align: center;
-	font-family: 'Pacifico', cursive;
-	margin:0;
-	padding:0;
-
-}
-
 
 
 .heading {
+	/*opacity: 0.8;*/
+width: 100%;
+padding-top: 10px;
+padding-bottom: 10px;
+background-color: #7fdfb9;
+
+}
+
+.heading-content {
+	opacity: 1;	
+		padding-top: 15px;
+
+}
+
+
+.heading-content h1 {
+
+	color: #eceaac;
+	text-align: center;
+	font-family: 'Pacifico', cursive;
+	text-shadow: black 3px 4px 10px;
+	font-size: 100px;
+}
+
+.nav {
 
 	background-color: #ff8080;
-	height: 430px;
+	height:300px;
+	padding-top: 80px;
+   
+}
+
+.main {
+
+	background-color: #333333;
+ 	padding-top: 40px;
+	position: relative;
+	bottom:390px;
+}
+
+.chapter-display {
+	padding-top: 30px;
+	color:white;
+	text-align: center;
+	
+
 }
 
 .book {
@@ -34,6 +83,7 @@ body {
 
 
 .row {
+
   max-width: 1000px;
   min-width:300px;
   padding-left: 20px;
@@ -101,8 +151,10 @@ select {
 
 }
 
-.chapter-display {
-	color:white;
-	text-align: center;
-	
+
+
+.chapter-display p {
+	font-size: 50px;
+	font-family: 'Open Sans Condensed', sans-serif;
+
 }

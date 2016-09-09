@@ -2,6 +2,7 @@
 $(document).ready(function(){
 
 		// chapterFilter(book);
+	var clickCount=0
 
 	var i=0
 
@@ -24,6 +25,27 @@ $(document).ready(function(){
 	}
 
 
+	$('.fa.fa-caret-square-o-down').click(function(){
+
+		clickCount=clickCount+1
+
+		if(clickCount%2 != 0){
+
+			$('.main').animate({top:'0px'},"slow")
+
+		console.log(clickCount)
+
+		} else {
+
+			$('.main').animate({top:'-380px'},"slow")
+
+		console.log(clickCount)
+
+		}
+
+		
+
+	})
 
 
 	$('.chapter-display h1').text( $('#book option:selected').text()+ ' '+ selected_chapter) 
@@ -81,7 +103,7 @@ $(document).ready(function(){
 				console.log( verse_number)
 
 
-				 $('.chapter-display').append( '<p>'+ verse_number+' '+ value.verse+'</p>')
+				 $('.chapter-display').append( '<p>'+ verse_number+'   '+ value.verse+'</p>')
 
 				$('#verse').append('<option value='+verse_number+'>'+verse_number+'</option>')
 

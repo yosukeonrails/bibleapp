@@ -4,23 +4,39 @@
 <link rel="stylesheet" type="text/css" href="css/main.css">
 
 <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Montserrat|Pacifico" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans+Condensed:300" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
 
 	<title> Bible App</title>
 </head>
 
 <body>
 
+<div class="black-canvas">
+
+    <div class="heading">
+
+      <div class="heading-content">
+
+        <h1> YOYO BibleApp</h1>
+
+        <i class="fa fa-caret-square-o-down" aria-hidden="true"></i>
+        
+      </div>
+
+    </div>
 
 
-<div class="heading">
-
-          <h1> YOYO BibleApp</h1>
+         
 
 
+<div class="nav">
     
   <div class="book">
 
-    <label class="select-book" for="version"> Book </label>
+    <label class="select-book" for="version"> Book: </label>
 
       <select name="book" id='book' required>
 
@@ -78,7 +94,7 @@
 
       <div class="verse">
 
-      <label class="select-verse" for="verse"> Verse </label>
+      <label class="select-verse" for="verse"> Verse: </label>
       <select name="verse" id='verse' required>
         <option value="0"></option> 
 
@@ -88,7 +104,7 @@
       </div>
   
   <div class="version">    
-  <label class="select-version" for="version"> Bible Version </label>
+  <label class="select-version" for="version"> Version: </label>
   <select name="version" id='version' required>
 
   <option value="kjv" selected> KJV </option>
@@ -101,23 +117,30 @@
 
   </div>
 
+
+
    <!-- end of heading  -->
+  <div class="main">
 
-
-<div class="row">
-
+    <div class="row">
 
       <div class="chapter-display">
 
-        <h1></h1> 
+      <h1></h1> 
 
-      </div>
+    </div>
+
+  </div>
 
 </div>
       
 
+      </div> <!-- end of canvas-->
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
 <script src="js/filter.js"></script>
 	<script src="js/app.js"></script>
+
+  
 </body>
 </html>
