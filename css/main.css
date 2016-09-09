@@ -1,3 +1,56 @@
+body {
+
+	font-family: 'Montserrat', sans-serif;
+	background-color: #333333;
+	margin:0;
+	padding:0;
+
+}
+
+
+.heading h1 {
+	text-align: center;
+font-family: 'Pacifico', cursive;
+margin:0;
+	padding:0;
+
+}
+
+
+
+.heading {
+	background-color: #ff8080;
+}
+
+.book {
+	text-align: center;
+}
+
+.select-book {
+	font-size: 60px;
+}
+
+
+.row {
+  max-width: 1000px;
+  min-width:300px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+
+}
+
+.second-row {
+	text-align: center;
+}
+
+label {
+
+	font-size: 50px;
+}
+
+
+
 .chapter li {
 	display: inline;
 	margin-right: 10px;
@@ -6,15 +59,48 @@
 	padding:2px;
 }
 
- .book ,.version, .new-book, .chapter{
+
+
+ .chapter, .verse {
+
 	display: inline;
+
+}
+
+.version {
+	display:block;
+	text-align: center;
+
+}
+
+.version label {
+
+	font-size: 60px;
+}
+
+h1 {
+	font-size: 100px;
 }
 
 
+ label {
+ 	font-size: 20px;
+ }
+
+.book select, .version select{
+	width: 200px;
+}
 
 select {
+	display: inline;
+	width: 60px;
+	font-size: 50px;
+	color:white;
 
-	width: 200px;
-	font-size: 40px;
+}
 
+.chapter-display {
+	color:white;
+	text-align: center;
+	
 }
