@@ -16,6 +16,12 @@ body {
 
 }
 
+.selection {
+	 display: table;
+    margin: 0 auto;
+    font-size: 40px;
+}
+
 
 
 .black-canvas {
