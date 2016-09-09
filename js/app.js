@@ -3,6 +3,9 @@ $(document).ready(function(){
 
 	var i=0
 
+	var selected_chapter=1
+
+
 		var chapter_number;
 
 	var current_verses= []
@@ -19,6 +22,7 @@ $(document).ready(function(){
 		v:version
 
 	}
+	$('.chapter-display h1').text( $('#book option:selected').text()+ ' '+ selected_chapter) 
 
 
     getRequest(params);
@@ -61,6 +65,8 @@ $(document).ready(function(){
 
 				console.log(value.verse)
 
+			
+
 
 				current_verses.push(value.verse)
 
@@ -102,6 +108,8 @@ $(document).ready(function(){
 
  	$('.version select').click().change(function(){
 
+
+
  		version = $('#version option:selected').val()
 
 			var params= {
@@ -116,6 +124,8 @@ $(document).ready(function(){
 
 
  	$('.book select').click().change(function(){
+
+ 			$('.chapter-display h1').text( $('#book option:selected').text()+ ' '+ selected_chapter) 
  
 
  		book = $('#book option:selected').val()
@@ -137,6 +147,8 @@ $(document).ready(function(){
 
  		book = $('#new-book option:selected').val()
  		version = $('#version option:selected').val()
+
+ 		$('.chapter-display h1').text( $('#new-book option:selected').text()+ ' '+ selected_chapter) 
 
 			var params= {
 				p:book,
@@ -165,6 +177,8 @@ $(document).ready(function(){
 
    		console.log(book)
 
+   		$('.chapter-display h1').text( $('#book option:selected').text()+ ' '+ selected_chapter) 
+
  		version = $('#version option:selected').val()
 
 			var params= {
@@ -189,5 +203,3 @@ $(document).ready(function(){
 	
 
 });
-
-

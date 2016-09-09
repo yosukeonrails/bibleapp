@@ -14,12 +14,9 @@
 
       i=0
 
-      for (i = 0; i <= chapter_number; i++) { 
+      for (i = 1; i <= chapter_number; i++) { 
 
       $('.chapter').append('<li>'+i+'</li>')
 
       }
     }
-
-
-   
