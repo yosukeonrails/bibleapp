@@ -1,13 +1,19 @@
 .chapter li {
 	display: inline;
 	margin-right: 10px;
+	border:1px solid;
+	border-radius:4px;
+	padding:2px;
 }
 
-.chapter, .book ,.version, .new-book{
+ .book ,.version, .new-book, .chapter{
 	display: inline;
 }
 
+
+
 select {
+
 	width: 200px;
 	font-size: 40px;
 

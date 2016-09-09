@@ -1,7 +1,7 @@
 
    function chapterFilter(book ){
 
-      $('.chapter li').remove()
+      $('#chapter-number option').remove()
         
       if (book=='gen1'){ chapter_number= 50; book='genesis'} 
       else if (book=='romans1'){ chapter_number= 16; book='romans'} 
@@ -16,7 +16,7 @@
 
       for (i = 1; i <= chapter_number; i++) { 
 
-      $('.chapter').append('<li>'+i+'</li>')
+         $('#chapter-number').append('<option value='+i+'>'+i+'</option>')
 
       }
     }

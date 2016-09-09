@@ -1,12 +1,13 @@
 
 $(document).ready(function(){
 
+		// chapterFilter(book);
+
 	var i=0
 
 	var selected_chapter=1
 
-
-		var chapter_number;
+		var chapter_number=50
 
 	var current_verses= []
 
@@ -20,9 +21,14 @@ $(document).ready(function(){
 
 		p:book,
 		v:version
-
 	}
+
+
+
+
 	$('.chapter-display h1').text( $('#book option:selected').text()+ ' '+ selected_chapter) 
+
+		chapterFilter(book)
 
 
     getRequest(params);
@@ -129,6 +135,8 @@ $(document).ready(function(){
  
 
  		book = $('#book option:selected').val()
+ 		
+
  		version = $('#version option:selected').val()
 
 			var params= {
@@ -143,10 +151,12 @@ $(document).ready(function(){
 
 
 	$('.new-book select').click().change(function(){
- 
+ 			
+ 			selected_chapter=1
 
  		book = $('#new-book option:selected').val()
  		version = $('#version option:selected').val()
+
 
  		$('.chapter-display h1').text( $('#new-book option:selected').text()+ ' '+ selected_chapter) 
 
@@ -162,12 +172,10 @@ $(document).ready(function(){
  	})
 
 
-	
+	$('.chapter select').change(function(){
 
 
-   $('.chapter').on('click', 'li', function(){
-
-   		selected_chapter= $(this).text()
+   		selected_chapter= $(this).val()
 
    		console.log(selected_chapter)
 
@@ -192,11 +200,51 @@ $(document).ready(function(){
 
 			book=book+'1'
 
+ 		
+ 	})
 
 
-			// chapterFilter(book);
-   			})
 
+
+
+
+
+	
+    //////// here starts the click li chapter selection//////////////////////////////////////////////
+
+
+
+   // $('.chapter').on('click', 'li', function(){
+
+   // 		selected_chapter= $(this).text()
+
+   // 		console.log(selected_chapter)
+
+   // 		// console.log( 'length of book is'+ book.length)
+
+   // 		book= book.substring(0, book.length-1)
+
+   // 		console.log(book)
+
+   // 		$('.chapter-display h1').text( $('#book option:selected').text()+ ' '+ selected_chapter) 
+
+ 		// version = $('#version option:selected').val()
+
+			// var params= {
+			// 	p:book+selected_chapter,
+			// 	v: version
+			// }
+
+			// console.log(book+selected_chapter)
+
+			// getRequest(params);
+
+			// book=book+'1'
+
+			// // chapterFilter(book);
+   // 			})
+
+    //////// here ends the click li chapter selection//////////////////////////////////////////////
 
 	
 
