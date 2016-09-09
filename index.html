@@ -13,8 +13,8 @@
      <div class="version">
 	<select name="version" id='version' required>
 
-	<option value="kjv"> KJV </option>
-	<option value="korean" selected>Korean</option>
+	<option value="kjv" selected> KJV </option>
+	<option value="korean" >Korean</option>
 	<option value="asv">ASV</option>
 
 	</select>
@@ -35,16 +35,9 @@
 
     </div>
       
-
-
-    <label class="select-version" for="version">Chapter</label>
-      <select name="version" id='version' required>
-
-        <option value="0"> KJV </option>
-        <option value="1" selected>NIV</option>
-        <option value="2">ASV</option>
-
-      </select>
+      <div class="chapter">
+        
+      </div>
 
       <label class="select-version" for="version">Verse</label>
       <select name="version" id='version' required>
@@ -55,7 +48,7 @@
       </select>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js"></script>
-
+<script src="js/filter.js"></script>
 	<script src="js/app.js"></script>
 </body>
 </html>

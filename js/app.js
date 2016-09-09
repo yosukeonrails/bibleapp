@@ -1,16 +1,23 @@
 
 $(document).ready(function(){
 
+	var i=0
+
+		var chapter_number;
+
 	var current_verses= []
-	var chapter_number= current_verses.length
+
+	var verse_number= current_verses.length
 
       var version = $('#version option:selected').val()
+
       var book = $('#book option:selected').val()
 
-
 	var params= {
+
 		p:book,
 		v:version
+
 	}
 
 
@@ -30,6 +37,8 @@ $(document).ready(function(){
 
 				myData = data.chapter
 
+      			current_verses=[]
+
 				console.log(myData)
 
 				showResults(myData);
@@ -41,32 +50,24 @@ $(document).ready(function(){
 
 
 
-      
       function showResults(myData){
 
 
       	 $.each(myData, function(index, value){
 
-      	 		console.log(value.verse)
+				console.log(value.verse)
 
-      	 	current_verses.push(value.verse)
+				current_verses.push(value.verse)
 
-      	 	console.log(current_verses)
+				verse_number = current_verses.length
 
-      	 	chapter_number = current_verses.length
-
-      	 	console.log( chapter_number)
-
-
+				console.log( verse_number)
 
 			})
 
       }
 
 
-
-
-     
  	$('.version select').change(function(){
 
  		version = $('#version option:selected').val()
@@ -83,6 +84,7 @@ $(document).ready(function(){
 
 
  	$('.book select').change(function(){
+ 
 
  		book = $('#book option:selected').val()
  		version = $('#version option:selected').val()
@@ -94,12 +96,43 @@ $(document).ready(function(){
 
 			getRequest(params);
 
-			console.log(book)
+			chapterFilter(book);			
 
  	})
 
 
-		
+	
+
+
+   $('.chapter').on('click', 'li', function(){
+
+   		selected_chapter= $(this).text()
+
+   		console.log(selected_chapter)
+
+   		// console.log( 'length of book is'+ book.length)
+
+   		book= book.substring(0, book.length-1)
+
+   		console.log(book)
+
+ 		version = $('#version option:selected').val()
+
+			var params= {
+				p:book+selected_chapter,
+				v: version
+			}
+
+			console.log(book+selected_chapter)
+
+			getRequest(params);
+
+			chapterFilter(book);
+
+
+
+   })
+
 	
 
 	
