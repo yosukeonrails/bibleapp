@@ -127,10 +127,9 @@ $(document).ready(function(){
 
 			getRequest(params);
 
-			chapterFilter(book);
+			book=book+'1'
 
-
-
+			// chapterFilter(book);
    })
 
 	
