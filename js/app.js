@@ -69,7 +69,10 @@ $(document).ready(function(){
 
 			success:function(data){
 
+
 				myData = data.chapter
+
+				console.log(myData)
 
       			current_verses=[]
 
@@ -90,6 +93,24 @@ $(document).ready(function(){
 
       	 $.each(myData, function(index, value){
 
+      	 		if(version=='cns'){
+
+				current_verses.push(value.verse)
+
+				verse_number = current_verses.length
+
+				  // console.log(verse_number)
+
+
+				 $('.chapter-display').append( '<p>'+ verse_number+'   '+ value.verse+'</p>')
+
+				$('#verse').append('<option value='+verse_number+'>'+verse_number+'</option>')
+
+				console.log('works ut its simplified chinese')
+      	 			
+      	 		 } else {
+
+
 				current_verses.push(value.verse)
 
 				verse_number = current_verses.length
@@ -98,6 +119,10 @@ $(document).ready(function(){
 				 $('.chapter-display').append( '<p>'+ verse_number+'   '+ value.verse+'</p>')
 
 				$('#verse').append('<option value='+verse_number+'>'+verse_number+'</option>')
+
+
+      	 		 }
+
 
 			})
 
@@ -119,8 +144,6 @@ $(document).ready(function(){
 
 
  	$('.version select').click().change(function(){
-
-
 
 
  		version = $('#version option:selected').val()
